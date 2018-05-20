@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-
+require "clipboard"
 def usage
   puts 'Configuration:'
   puts '  cloudapp config [USERNAME] [PASSWORD]'
@@ -91,7 +91,8 @@ begin
     args?
     ARGV[1..-1].each do |file|
       drop = @client.upload file, :private => (not p.nil?)
-      puts "uploaded #{file} as #{slug(drop)}"
+      Clipboard.copy drop.url
+      puts "uploaded #{file} as #{drop.url}"
     end
   when 'private'
     if ARGV[1]
