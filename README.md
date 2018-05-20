@@ -21,7 +21,7 @@ cloudapp-cli depends on the [cloudapp_api][api], so first install it as a gem de
 
 Install with the one-liner (shock!) (make sure that your /usr/local/bin is writable and it's in PATH):
 
-	cd /usr/local/bin && curl -fOs https://raw.github.com/bonifaido/cloudapp-cli/master/cloudapp && chmod +x cloudapp && cd -
+	cd ~/bin/ && curl -fOs https://raw.github.com/bonifaido/cloudapp-cli/master/cloudapp && chmod +x cloudapp && cd -
 
 Usage
 -----
